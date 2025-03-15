@@ -1,8 +1,10 @@
+import React from "react";
+import Greeting from "./components/Greeting";
+
 function App() {
-  const name = "world";
   return (
     <div>
-      <h1>hello, {name}!</h1>
+      <Greeting />
     </div>
   );
 }
