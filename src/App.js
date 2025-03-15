@@ -1,18 +1,18 @@
 import React from "react";
-import Greeting from "./components/Greeting";
-import Counter from "./components/Counter";
-import FruitList from "./components/FruitList";
-import CatImageFetcher from "./components/CatImageFetcher";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import HistoryPage from "./pages/HistoryPage";
 
 function App() {
   return (
-    <div>
-      <Greeting name = "shushu"/>
-      <Counter />
-      <FruitList />
-      <CatImageFetcher />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/history" element={<HistoryPage />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
